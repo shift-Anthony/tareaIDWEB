@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num1 = parseFloat(prompt("Ingresa el primer número:"));
+        let num2 = parseFloat(prompt("Ingresa el segundo número:"));
+        let operador = prompt("Ingresa un operador (+, -, *, /, %, **):");
+        let resultado;
+        let operacionValida = true;
+        if (operador === '+') {
+            resultado = num1 + num2;
+        } else if (operador === '-') {
+            resultado = num1 - num2;
+        } else if (operador === '*') {
+            resultado = num1 * num2;
+        } else if (operador === '/') {
+            resultado = num1 / num2;
+        } else if (operador === '%') {
+            resultado = num1 % num2;
+        } else if (operador === '**') {
+            resultado = num1 ** num2;
+        } else {
+            operacionValida = false;
+            document.write(`<h1>Error: El operador "${operador}" no es válido.</h1>`);
+        }
+        if (operacionValida) {
+            document.write(`<h1>El resultado de ${num1} ${operador} ${num2} es: ${resultado}</h1>`);
+        }
+    </script>
+</body>
+
+</html>

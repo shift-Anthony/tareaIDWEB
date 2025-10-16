@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const numeroSecreto = Math.floor(Math.random() * 100) + 1;
+        const intentosMaximos = 6;
+        let gano = false;
+        alert("¡Bienvenido! He pensado un número entre 1 y 100. Tienes 6 intentos para adivinarlo.");
+        for (let i = 1; i <= intentosMaximos; i++) {
+            let intentoUsuario = parseInt(prompt(`Intento ${i} de ${intentosMaximos}. Ingresa tu número:`));
+            if (intentoUsuario === numeroSecreto) {
+                document.write(`<h1>¡Felicidades, ganaste! 🎉</h1>`);
+                document.write(`<p>Adivinaste el número secreto (${numeroSecreto}) en ${i} intentos.</p>`);
+                gano = true;
+                break;
+            } else if (intentoUsuario < numeroSecreto) {
+                alert("El número secreto es MAYOR. ¡Sigue intentando!");
+            } else if (intentoUsuario > numeroSecreto) {
+                alert("El número secreto es MENOR. ¡Sigue intentando!");
+            }
+        }
+        if (!gano) {
+            document.write(`<p>Se te acabaron los intentos. El número secreto era ${numeroSecreto}.</p>`);
+        }
+    </script>
+</body>
+
+</html>

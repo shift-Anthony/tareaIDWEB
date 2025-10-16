@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let velocidadKmh = parseFloat(prompt("Ingresa la velocidad en kilómetros por hora:"));
+            const factorConversion = 1.60934; // km por milla
+            let velocidadMps = velocidadKmh / 3.6;
+            let velocidadMph = velocidadKmh / factorConversion;
+
+            alert(
+                `${velocidadKmh.toFixed(2)} km/h equivale a:\n\n` +
+                ` ${velocidadMps.toFixed(2)} metros por segundo (m/s)\n` +
+                ` ${velocidadMph.toFixed(2)} millas por hora (mph)`
+            );
+    </script>
+</body>
+</html>

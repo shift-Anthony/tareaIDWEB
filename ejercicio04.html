@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let capitalInicial = parseFloat(prompt("Ingresa el capital inicial:"));
+        let tasaInteresAnual = parseFloat(prompt("Ingresa la tasa de interés anual:"));
+        let numeroA = parseFloat(prompt("Ingresa el número de años:"));
+        if (isNaN(capitalInicial) || isNaN(tasaInteresAnual) || isNaN(numeroA)) {
+            alert("Uno o más valores ingresados no son números válidos.");
+        } else {
+            let montoFinal = capitalInicial * Math.pow((1 + (tasaInteresAnual / 100)), numeroA);
+            let interesGanado = montoFinal - capitalInicial;
+            alert(
+                `Resultados de la inversión:\n\n` +
+                `Monto Final: ${montoFinal.toFixed(2)}\n` +
+                `Interés Ganado: ${interesGanado.toFixed(2)}`
+            );
+        }
+    </script>
+</body>
+
+</html>

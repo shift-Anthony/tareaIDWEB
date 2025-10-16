@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sumaEdades = 0;
+        let cantidadPersonas = 0;
+        let mayoresDeEdad = 0;
+        while (true) {
+            let entrada = prompt("Ingresa una edad,no ponga nada para cancelar:");
+
+            if (entrada === null || entrada === "") {
+                break;
+            }
+            let edad = parseInt(entrada);
+            sumaEdades += edad;
+            cantidadPersonas++; 
+            if (edad >= 18) {
+                mayoresDeEdad++;
+            }
+        }
+        document.write("<h1>Resultados del Análisis</h1>");
+        if (cantidadPersonas > 0) {
+            let promedio = sumaEdades / cantidadPersonas;
+            document.write(`<h2>El promedio de edades es: ${promedio.toFixed(2)}</h2>`);
+            document.write(`<h2>La cantidad de personas mayores de edad es: ${mayoresDeEdad}</h2>`);
+        } else {
+            document.write("<h2>No se ingresaron datos para analizar.</h2>");
+        }
+    </script>
+</body>
+</html>

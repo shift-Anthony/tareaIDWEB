@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("Ingresa un número entero positivo (n):"));
+        let primosEncontrados = [];
+        let cantidadPrimos = 0;
+        for (let i = 2; i <= n; i++) {
+            let esUnPrimo = true;
+            for (let j = 2; j * j <= i; j++) {
+                if (i % j === 0) {
+                    esUnPrimo = false;
+                    break;
+                }
+            }
+            if (esUnPrimo) {
+                primosEncontrados.push(i);
+                cantidadPrimos++;        
+            }
+        }
+        document.write(`<h1>Números primos encontrados hasta ${n}:</h1>`);
+        document.write(`<p>${primosEncontrados.join(', ')}</p>`);
+        document.write(`<h2>Cantidad total de números primos: ${cantidadPrimos}</h2>`);
+    </script>
+</body>
+</html>

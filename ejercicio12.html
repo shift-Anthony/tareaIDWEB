@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let n = parseInt(prompt("Ingresa el número de términos para la serie de Fibonacci:"));
+        let a = 0;
+        let b = 1;
+        let serieTexto = ""; 
+        for (let i = 0; i < n; i++) {
+            serieTexto += a + ", ";
+            let siguiente = a + b;
+            a = b;
+            b = siguiente;
+        }
+        document.write(`<h1>Los primeros ${n} términos de la serie de Fibonacci son:</h1>`);
+        document.write(`<h2>${serieTexto.slice(0, -2)}</h2>`);
+    </script>
+</body>
+
+</html>

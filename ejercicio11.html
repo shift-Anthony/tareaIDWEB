@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("¿Cuántos números va a ingresar?"));
+        let suma = 0;
+        for (let i = 1; i <= n; i++) {
+            let numero = parseFloat(prompt(`Ingresa el número ${i}:`));
+            suma = suma + numero;
+        }
+        let promedio = suma / n;
+        document.write(`<h1>La suma total de los números es: ${suma}</h1>`);
+        document.write(`<h1>El promedio es: ${promedio.toFixed(2)}</h1>`);
+    </script>
+</body>
+</html>
