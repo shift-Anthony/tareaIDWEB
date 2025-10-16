@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let nota1 = prompt("Ingrese la primera nota")
+        let peso1 = prompt("Ingrese el porcentaje de la evaluacion")
+        let nota2 = prompt("Ingrese la segunda nota")
+        let peso2 = prompt("Ingrese el porcentaje de la evaluacion")
+        let nota3 = prompt("Ingrese la tercera nota")
+        let peso3 = prompt("Ingrese el porcentaje de la evaluacion")
+        let pesot = peso1 + peso2 + peso3;    
+        if(nota1<20 || nota2 <20 || nota3 <20 ){
+            alert("las notas deben ser menor o igual a 20");
+        } else if(pesot!=='100'){
+            alert("los porcentajes deben sumar 100 "+(pesot));
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

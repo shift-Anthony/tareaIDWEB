@@ -1,0 +1,12 @@
+        } else if (pesot !== 100) {
+            alert("Los porcentajes deben sumar 100 en total");
+        } else {
+            alert("la nota total es " + ((nota1 * peso1 + not2 * peso2 + nota3 * peso3)/pesot));
+            document.write("Primera nota: " + nota1);
+            document.write("Segunda nota: " + nota2);
+            document.write("Tercera nota: " + nota3);
+            document.write("Primer porcentaje: " + peso1);
+            document.write("Segundo porcentaje: " + peso2);
+            document.write("Tercer porcentaje: " + peso3);
+        }
+        document.writeln("asdas")
